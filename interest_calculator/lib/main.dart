@@ -100,7 +100,8 @@ class _SIFormState extends State<SIForm>
                     style: textStyle,
                     controller: roiController,
                     validator: (String value) {
-                      return "Please enter interest";
+                      if(value.isEmpty)
+                        return "Please enter interest";
                     },
                     decoration: InputDecoration(
                         labelText: "Rate of interest",
@@ -128,7 +129,8 @@ class _SIFormState extends State<SIForm>
                           style: textStyle,
                           controller: termController,
                           validator: (String value) {
-                            return "Please enter term";
+                            if(value.isEmpty)
+                              return "Please enter term";
                           },
                           decoration: InputDecoration(
                               labelText: "Term",
